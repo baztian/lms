@@ -152,9 +152,10 @@ class Player:
         self._state = player
 
     def __str__(self):
-        return '%s (%s:%s:%d%%): %s - %s (%3d%%: %s / %s)' % (
-            self.name, self.model, self.ip, self.wifi_signal_strength,
-            self.artist or '', self.title,
+        return '%s (%s %s:%s:%s %d%%): %s - %s (%3d%%: %s / %s)' % (
+            self.name, self.player_id, self.model, self.ip, self.port,
+            self.wifi_signal_strength,
+            self.artist or '', self.title or '',
             self.position_pct,
             self.position, self.duration)
 
